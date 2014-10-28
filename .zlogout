@@ -1,0 +1,1 @@
+/home/angelo/.zprezto/runcoms/zlogout
