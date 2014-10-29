@@ -12,3 +12,6 @@ fi
 
 # Customize to your needs...
 
+alias e='emacsclient -t'
+alias ec='emacsclient -c'
+alias vi='emacsclient -t'
