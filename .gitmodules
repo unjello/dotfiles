@@ -1,3 +1,6 @@
 [submodule ".zprezto"]
 	path = .zprezto
 	url = git@github.com:unjello/prezto.git
+[submodule ".emacs.d"]
+	path = .emacs.d
+	url = https://github.com/bbatsov/prelude.git
