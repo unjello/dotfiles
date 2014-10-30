@@ -15,3 +15,5 @@ fi
 alias e='emacsclient -t'
 alias ec='emacsclient -c'
 alias vi='emacsclient -t'
+
+alias napi='napi.sh -f microdvd -C UTF-8'
