@@ -15,6 +15,9 @@ fi
 alias e='emacsclient -t'
 alias ec='emacsclient -c'
 alias vi='emacsclient -t'
+export EDITOR='emacsclient -t'
+export VISUAL='emacsclient -c'
+export ALTERNATE_EDITOR=''
 
 alias napi='napi.sh -f microdvd -C UTF-8'
 
