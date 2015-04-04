@@ -1,1 +1,0 @@
-/home/angelo/.zprezto/runcoms/zlogin
