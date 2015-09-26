@@ -25,3 +25,5 @@ export XZ_OPT=-9ev
 
 enc() { openssl aes-256-cbc -a -salt -in $1 -out $1.enc }
 dec() { openssl aes-256-cbc -d -a -in $1 -out $2 }
+
+export PATH=~/.rbenv/shims:$PATH
