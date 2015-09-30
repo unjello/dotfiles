@@ -13,7 +13,7 @@ fi
 # Customize to your needs...
 
 alias e='emacsclient -t'
-alias ec='emacsclient -c'
+ec() { emacsclient -c $1 & }
 alias vi='emacsclient -t'
 export EDITOR='emacsclient -t'
 export VISUAL='emacsclient -c'
