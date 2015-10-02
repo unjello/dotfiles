@@ -20,6 +20,7 @@ export VISUAL='emacsclient -c'
 export ALTERNATE_EDITOR=''
 
 alias napi='napi.sh -f microdvd -C UTF-8'
+alias ytdl='youtube-dl -no "%(id)s-%(title)s.%(ext)s" --user-agent "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.153 Safari/537.36" --sleep-interval 20 -vr 200K'
 
 export XZ_OPT=-9ev
 
