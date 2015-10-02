@@ -14,6 +14,7 @@ fi
 
 alias e='emacsclient -t'
 ec() { emacsclient -c $1 & }
+backup() { tar -cJ $1 | gpg -o $1.tar.xz.gpg -er 'andrzej@lichnerowicz.pl' }
 alias vi='emacsclient -t'
 export EDITOR='emacsclient -t'
 export VISUAL='emacsclient -c'
