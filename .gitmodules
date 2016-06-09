@@ -1,9 +1,3 @@
-[submodule ".emacs.d"]
-	path = emacs.d
-	url = https://github.com/unjello/prelude.git
-[submodule "zprezto"]
-	path = zprezto
-	url = git@github.com:unjello/prezto.git
 [submodule "store/iterm2-color-schemes"]
 	path = store/iterm2-color-schemes
 	url = https://github.com/mbadolato/iTerm2-Color-Schemes.git
