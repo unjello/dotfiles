@@ -4,3 +4,9 @@
 [submodule "rerum/monaco.ttf"]
 	path = rerum/monaco.ttf
 	url = https://github.com/todylu/monaco.ttf.git
+[submodule "dot/emacs.d"]
+	path = dot/emacs.d
+	url = https://github.com/unjello/spacemacs.git
+[submodule "dot/zprezto"]
+	path = dot/zprezto
+	url = https://github.com/unjello/prezto.git
