@@ -16,4 +16,10 @@ cinst powershell -y
 cinst git -y
 cinst putty -y
 cinst poshgit -y
+cinst emacs -y
+Write-Host
+
+Write-Host "Copying Emacs configuration"
+New-Item -ItemType Directory -Force -Path $env:HOMEDRIVE\$env:HOMEPATH\.emacs.d | Out-Null
+Copy-Item -Recurse dot\emacs.d\* $env:HOMEDRIVE\$env:HOMEPATH\.emacs.d
 Write-Host
