@@ -83,6 +83,6 @@ Install-Confirm radmin.viewer
 
 Write-Host "Copying Emacs configuration"
 New-Item -ItemType Directory -Force -Path $env:HOMEDRIVE\$env:HOMEPATH\.emacs.d | Out-Null
-Copy-Item -Recurse dot\emacs.d\* $env:HOMEDRIVE\$env:HOMEPATH\.emacs.d
+Copy-Item -Force -Recurse dot\emacs.d\* $env:HOMEDRIVE\$env:HOMEPATH\.emacs.d
 Write-Host
 
