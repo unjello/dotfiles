@@ -3,11 +3,22 @@ Set-PSReadlineOption -EditMode Emacs
 $env:path += ";" + $env:HOMEPATH + "\Documents\WindowsPowerShell\"
 
 # Load PoshGit
+function ShortenPath($path) {
+    $pathArray = $path -Split '\\'
+    $drive = $pathArray[0]
+    $length = $pathArray.Length;
+    $current = $pathArray[$length-1]
+    $pathArray = $pathArray[1..($length-2)] | % { $_[0] }
+    $reduced = $pathArray | % {$r = ''} {$r += ($_ + '\')} {$r}
+    $ret = $drive + '\' + $reduced + $current
+    $ret
+}
+
 Push-Location (Split-Path -Path $MyInvocation.MyCommand.Definition -Parent)
 Import-Module posh-git
 function global:prompt {
     $realLASTEXITCODE = $LASTEXITCODE
-    Write-Host($pwd.ProviderPath) -nonewline
+    Write-Host(ShortenPath($pwd.ProviderPath)) -nonewline
     Write-VcsStatus
     $global:LASTEXITCODE = $realLASTEXITCODE
     return "> "
@@ -114,4 +125,3 @@ Function Unj-VBoxChangeVmsToNat {
 }
 Set-Alias -Name vmnat -Value Unj-VBoxChangeVmsToNat
 Set-Alias -Name vmrnat -Value Unj-VBoxChangeRunningVmsToNat
-
