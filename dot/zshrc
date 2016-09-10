@@ -29,3 +29,6 @@ enc() { openssl aes-256-cbc -a -salt -in $1 -out $1.enc }
 dec() { openssl aes-256-cbc -d -a -in $1 -out $2 }
 
 export PATH=~/.rbenv/shims:$PATH
+
+# jmettraux @ http://stackoverflow.com/questions/539294/how-do-i-determine-file-encoding-in-osx
+alias vic="vim -c 'execute \"silent !echo \" . &fileencoding | q'"
