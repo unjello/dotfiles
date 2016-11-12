@@ -77,7 +77,7 @@ Install-Confirm radmin.viewer
 
 Write-Host "Copying PowerShell Profile and user scripts"
 New-Item -ItemType Directory -Force -Path $env:HOMEDRIVE\$env:HOMEPATH\Documents\WindowsPowerShell | Out-Null
-Copy-Item windows\ps\*.ps1 $env:HOMEDRIVE\$env:HOMEPATH\Documents\WindowsPowerShell
+Copy-Item powershell\*.ps1 $env:HOMEDRIVE\$env:HOMEPATH\Documents\WindowsPowerShell
 Write-Host
 
 Write-Host "Copying Emacs configuration"
