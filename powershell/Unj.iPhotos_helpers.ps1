@@ -1,5 +1,5 @@
 ﻿# Copyright (c) Andrzej Lichnerowicz. All rights reserved.
-# Licensed under the BSD License. See License.txt in the project root folder for license information.
+# Licensed under the BSD License. See README.md in the project root folder for license information.
 
 function Move-iPhotosMasters($Source, $Year, $Month, $Target) {
     $src = Join-Path -Path $Source -ChildPath $Year -AdditionalChildPath $Month
