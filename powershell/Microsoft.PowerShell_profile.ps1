@@ -3,26 +3,11 @@ Set-PSReadlineOption -EditMode Emacs
 $env:path += ";" + $env:HOMEPATH + "\Documents\WindowsPowerShell\"
 
 # Load PoshGit
-function ShortenPath($path) {
-    $pathArray = $path -Split '\\'
-    $drive = $pathArray[0]
-    $length = $pathArray.Length;
-    $current = $pathArray[$length-1]
-    $pathArray = $pathArray[1..($length-2)] | % { $_[0] }
-    $reduced = $pathArray | % {$r = ''} {$r += ($_ + '\')} {$r}
-    $ret = $drive + '\' + $reduced + $current
-    $ret
-}
+
 
 Push-Location (Split-Path -Path $MyInvocation.MyCommand.Definition -Parent)
 Import-Module posh-git
-function global:prompt {
-    $realLASTEXITCODE = $LASTEXITCODE
-    Write-Host(ShortenPath($pwd.ProviderPath)) -nonewline
-    Write-VcsStatus
-    $global:LASTEXITCODE = $realLASTEXITCODE
-    return "> "
-}
+. .\Unj.Prompt.Collapsed.ps1
 Pop-Location
 Start-SshAgent -Quiet
 
