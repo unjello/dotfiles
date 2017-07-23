@@ -8,14 +8,17 @@ $env:path += ";" + $env:HOMEPATH + "\Documents\WindowsPowerShell\"
 Push-Location (Split-Path -Path $MyInvocation.MyCommand.Definition -Parent)
 Import-Module posh-git
 . .\Unj.Prompt.Collapsed.ps1
+
+. .\Other.Sudo.ps1
+. .\Unj.Git.ps1
+. .\Unj.iPhotos_helpers.ps1
+
+if (Test-Path Work.ps1) { . .\Work.ps1 }
+
 Pop-Location
 Start-SshAgent -Quiet
 
-
 Set-Alias -Name which -Value Get-Command
-
-
-
 
 Function Unj-VBoxManage { & $env:ProgramFiles\Oracle\VirtualBox\VBoxManage.exe $args }
 Function Unj-VBoxListVms { Unj-VBoxManage list vms }
