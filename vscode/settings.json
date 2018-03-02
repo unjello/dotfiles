@@ -11,6 +11,7 @@
     "workbench.startupEditor": "newUntitledFile",
     "editor.tabSize": 2,
     "editor.detectIndentation": false,
+    "instantmarkdown.autoOpenBrowser": false,
     "prettier.eslintIntegration": true,
     "todohighlight.keywords": [
       "DEBUG:",
