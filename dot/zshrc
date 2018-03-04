@@ -39,3 +39,7 @@ export NVM_DIR="$HOME/.nvm"
 
 # added by travis gem
 [ -f /Users/angelo/.travis/travis.sh ] && source /Users/angelo/.travis/travis.sh
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/Users/angelo/.sdkman"
+[[ -s "/Users/angelo/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/angelo/.sdkman/bin/sdkman-init.sh"
