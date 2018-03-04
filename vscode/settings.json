@@ -44,4 +44,7 @@
       },
   ],
   "go.inferGopath": true,
+  "go.toolsPath": "~/go",
+  "files.autoSave": "afterDelay",
+  "go.gocodeAutoBuild": true,
 }
