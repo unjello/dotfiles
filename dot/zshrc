@@ -36,3 +36,12 @@ alias vic="vim -c 'execute \"silent !echo \" . &fileencoding | q'"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# added by travis gem
+[ -f /Users/angelo/.travis/travis.sh ] && source /Users/angelo/.travis/travis.sh
+
+export GOPATH=~/go
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/Users/angelo/.sdkman"
+[[ -s "/Users/angelo/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/angelo/.sdkman/bin/sdkman-init.sh"

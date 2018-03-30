@@ -1,4 +1,4 @@
-# &copy;2016-2017;-0xaL;unlicensed (~public domain)
+# andrzej lichnerowicz, unlicensed (~public domain)
 
 # Install Visual Studio Code (w/ Insiders) settings
 if (Test-Path $env:APPDATA\Code\) {

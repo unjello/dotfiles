@@ -11,6 +11,7 @@
     "workbench.startupEditor": "newUntitledFile",
     "editor.tabSize": 2,
     "editor.detectIndentation": false,
+    "instantmarkdown.autoOpenBrowser": false,
     "prettier.eslintIntegration": true,
     "todohighlight.keywords": [
       "DEBUG:",
@@ -43,5 +44,8 @@
       },
   ],
   "go.inferGopath": true,
+  "go.toolsPath": "~/go",
+  "files.autoSave": "afterDelay",
+  "go.gocodeAutoBuild": true,
   "markdown.preview.scrollEditorWithPreview": true,
 }
