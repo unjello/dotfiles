@@ -43,4 +43,5 @@
       },
   ],
   "go.inferGopath": true,
+  "markdown.preview.scrollEditorWithPreview": true,
 }
