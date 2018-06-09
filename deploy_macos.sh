@@ -8,3 +8,6 @@
 # Install Fira Code
 brew tap caskroom/fonts
 brew cask install font-fira-code font-fira-mono font-fira-mono-for-powerline
+
+# Install pip
+easy_install pip
