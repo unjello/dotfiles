@@ -11,3 +11,6 @@ brew cask install font-fira-code font-fira-mono font-fira-mono-for-powerline
 
 # Install pip
 easy_install pip
+
+# Install [powerline-shell](https://github.com/powerline/powerline)
+pip install --user powerline-status
