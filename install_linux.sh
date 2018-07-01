@@ -10,4 +10,4 @@ curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-com
 curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh > ~/bin/.git-prompt.bash
 
 # Install Git-ls
-pip install --user git+https://github.com/jonathf/gls.git
+pip install --user git+https://github.com/unjello/gls.git@issue/1
