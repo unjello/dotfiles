@@ -48,4 +48,6 @@
   "files.autoSave": "afterDelay",
   "go.gocodeAutoBuild": true,
   "markdown.preview.scrollEditorWithPreview": true,
+  "terminal.integrated.shell.linux": "/bin/bash",
+  "terminal.integrated.shell.osx": "/bin/bash"
 }
