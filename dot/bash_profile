@@ -7,6 +7,5 @@ export GIT_PS1_SHOWCOLORHINTS=true
 
 export PS1='👼 \[\e[0;36m\]\[\e[0;36m\] \W\[\033[0;35m\]$(__git_ps1 " (%s)")\[\e[0m\]: '
 
-alias gls='set -f;gls';gls(){ command `python -m site --user-base`/bin/gls "$@"; set +f;}
-alias ls=gls
-alias ll='gls -l'
+alias ls='exa --grid --classify'
+alias ll='exa --long --classify --git --header --binary --group --modified --accessed --time-style=long-iso'
