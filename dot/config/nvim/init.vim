@@ -46,3 +46,5 @@ set noshowmode
 au VimEnter * RainbowParenthesesActivate
 au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
+
+set backup
