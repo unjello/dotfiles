@@ -1,65 +1,43 @@
+" [neo]vim settings, parts taken or inspired by:
+" @noopkat: https://github.com/noopkat/dotfiles/blob/master/.vimrc
+" cheers.
+" Remember to :PlugInstall 🤘
 call plug#begin('~/.config/nvim/plugged')
 
-Plug 'airblade/vim-gitgutter'
-Plug 'morhetz/gruvbox'
-Plug 'tpope/vim-fugitive'
+Plug 'ctrlpvim/ctrlp.vim'
 Plug 'vim-airline/vim-airline'
-Plug 'plasticboy/vim-markdown'
-Plug 'altercation/vim-colors-solarized'
-Plug 'kien/rainbow_parentheses.vim'
-Plug 'arecarn/crunch.vim'
-Plug 'pboettch/vim-cmake-syntax'
-Plug 'NLKNguyen/papercolor-theme'
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer' }
-
-Plug 'spolu/dwm.vim'
-Plug 'terryma/vim-multiple-cursors'
-Plug 'rhysd/vim-clang-format'
-
+Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'vim-airline/vim-airline-themes'
+ 
 call plug#end()
 
-let g:doxygen_enhanced_color=1
-let g:load_doxygen_syntax=1
+syntax on
+color dracula
+set smartindent
+set clipboard=unnamed " use os clipboard
+set shiftwidth=2 " number of spaces when shift indenting
+set tabstop=2 " number of visual spaces per tab
+set softtabstop=2 " number of spaces in tab when editing
+set expandtab " tab to spaces
+set number " show line numbers
+set cursorline  " highlight current line
+set showmatch " highlight matching [{()}]
+set incsearch " search as characters are entered
+set hlsearch " highlight matches
+let g:ctrlp_working_path_mode = 'r' " I copy and paste from other software a lot
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/node_modules/* " lol
+let g:ctrlp_show_hidden=1
 
-set expandtab
-set shiftwidth=2
-set lcs=trail:·,tab:»·
-set list
-set cursorline
-set number
+" airline
+let g:airline_theme = 'wombat'
+let g:airline#extensions#tabline#enabled = 0 
+let g:airline#extensions#branch#enabled = 1 
+let g:airline_left_sep = ' ❤  '
+let g:airline_right_sep = ' 🟆  '
+let g:airline_section_warning = '' 
+let g:airline_section_y = '' 
+let g:airline_section_x = '' 
+set laststatus=2 " for airline
 
-set spell spelllang=en_us
-set spellcapcheck=""
-
-set signcolumn=yes
-
-let g:ycm_confirm_extra_conf = 0
-
-let g:airline_powerline_fonts=1
-let g:rbpt_max = 16
-let g:rbpt_loadcmd_toggle = 0
-
-set background=dark
-let g:gruvbox_contrast_light="hard"
-let g:gruvbox_italic=1
-let g:gruvbox_invert_signs=0
-let g:gruvbox_improved_strings=0
-let g:gruvbox_improved_warnings=1
-let g:gruvbox_undercurl=1
-let g:gruvbox_contrast_dark="hard"
-colorscheme gruvbox
-
-let g:vim_markdown_frontmatter = 1
-let g:vim_markdown_folding_disabled = 1
-
-let g:vim_indent_guides_start_level = 2
-
-set laststatus=2
-
-set termguicolors
-
-au VimEnter * RainbowParenthesesActivate
-au Syntax * RainbowParenthesesLoadSquare
-au Syntax * RainbowParenthesesLoadBraces
-
-set backup
+set noruler
+set noshowmode
