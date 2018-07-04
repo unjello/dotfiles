@@ -8,7 +8,8 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'vim-airline/vim-airline-themes'
- 
+Plug 'kien/rainbow_parentheses.vim'
+
 call plug#end()
 
 syntax on
@@ -41,3 +42,7 @@ set laststatus=2 " for airline
 
 set noruler
 set noshowmode
+
+au VimEnter * RainbowParenthesesActivate
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
