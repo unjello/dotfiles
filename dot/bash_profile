@@ -1,3 +1,7 @@
+# bash_profile, parts taken or inspired by:
+# @noopkat: https://github.com/noopkat/dotfiles/blob/master/.bash_profile
+# cheers.
+
 source ~/bin/.git-completion.bash
 source ~/bin/.git-prompt.bash
 
@@ -10,4 +14,4 @@ export PS1='👼 \[\e[0;36m\]\[\e[0;36m\] \W\[\033[0;35m\]$(__git_ps1 " (%s)")\[
 alias ls='exa --grid --classify --all'
 alias ll='exa --long --classify --git --header --binary --group --modified --accessed --time-style=long-iso --all'
 
-alias wttr='curl -4 http://wttr.in/Kraków'
+alias wttr='curl -4 http://wttr.in/Kraków
