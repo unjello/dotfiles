@@ -1,7 +1,13 @@
 " [neo]vim settings, parts taken or inspired by:
 " @noopkat: https://github.com/noopkat/dotfiles/blob/master/.vimrc
 " cheers.
-" Remember to :PlugInstall 🤘
+
+if empty(glob('~/.config/nvim/autoload/plug.vim'))
+  silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall
+endif
+
 call plug#begin('~/.config/nvim/plugged')
 
 Plug 'ctrlpvim/ctrlp.vim'
