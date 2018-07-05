@@ -39,6 +39,7 @@ let g:airline_section_warning = ''
 let g:airline_section_y = '' 
 let g:airline_section_x = '' 
 set laststatus=2 " for airline
+let g:airline_powerline_fonts=1
 
 set noruler
 set noshowmode
