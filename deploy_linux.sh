@@ -5,7 +5,8 @@
 [[ -d $HOME/.config/Code ]] && cp -f vscode/*.json $HOME/.config/Code/User/
 [[ -d "$HOME/.config/Code - Insiders" ]] && cp -f vscode/*.json "$HOME/.config/Code - Insiders/User/"
 
-# Install Fira Code
+gsettings set org.pantheon.terminal.settings font 'Fira Code 11
+
 mkdir -p ~/.local/share/fonts
 for type in Bold Light Medium Regular Retina; do
     wget -O ~/.local/share/fonts/FiraCode-${type}.ttf \
