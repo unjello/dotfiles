@@ -14,7 +14,7 @@ mkdir -p ~/.tmp
 wget https://github.com/ogham/exa/releases/download/v0.8.0/exa-linux-x86_64-0.8.0.zip -O ~/.tmp/exa-linux.zip && \
 	cd ~/.tmp && \
 	unzip exa-linux.zip && \
-	sudo cp exa-linux-x86_64 /usr/local/bin && \
+	sudo cp exa-linux-x86_64 /usr/local/bin/exa && \
 	rm -rf ~/.tmp
 
 # Install Fira-Code font
