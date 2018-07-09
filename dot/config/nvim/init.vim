@@ -17,9 +17,6 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'kien/rainbow_parentheses.vim'
 Plug 'neomake/neomake', { 'on': 'Neomake' }
 
-call plug#end()
-
-" javascript
 if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 else
@@ -27,6 +24,9 @@ else
   Plug 'roxma/nvim-yarp'
   Plug 'roxma/vim-hug-neovim-rpc'
 endif
+
+call plug#end()
+
 let g:deoplete#enable_at_startup = 1
 
 syntax on
