@@ -45,3 +45,8 @@ done
 
 echo "fc-cache -f"
 fc-cache -f
+
+# Install nvm
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bas
+nvm install 9
+nvm use 9

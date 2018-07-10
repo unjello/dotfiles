@@ -20,3 +20,8 @@ curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-pro
 
 # Install exa
 brew install exa
+
+# Install nvm
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bas
+nvm install 9
+nvm use 9
