@@ -50,3 +50,6 @@ fc-cache -f
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bas
 nvm install 9
 nvm use 9
+npm i -g npm
+npm i -g pnpm
+npm i -g pm2
