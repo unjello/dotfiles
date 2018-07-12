@@ -16,7 +16,7 @@ Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'vim-airline/vim-airline-themes'
 Plug 'kien/rainbow_parentheses.vim'
 Plug 'neomake/neomake'
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py --js-completer' }
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py --js-completer --clang-completer' }
 
 call plug#end()
 
