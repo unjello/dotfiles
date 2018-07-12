@@ -17,6 +17,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'kien/rainbow_parentheses.vim'
 Plug 'neomake/neomake'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py --js-completer --clang-completer' }
+Plug 'rhysd/vim-clang-format'
 
 call plug#end()
 
