@@ -1,8 +1,10 @@
-sudo easy_install pip
+# Install pip and pip3
+sudo apt install python3-pip
+
 pip3 install --user neovim
 
 # Install [powerline-shell](https://github.com/powerline/powerline)
-pip install --user powerline-status
+pip3 install --user powerline-status
 
 # Install git prompt helpers
 mkdir -p ~/bin
