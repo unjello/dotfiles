@@ -1,5 +1,5 @@
 # Install pip and pip3
-sudo apt install python3-pip
+sudo apt install python3-pip -y
 
 # Install neovim
 sudo apt install software-properties-common -y
