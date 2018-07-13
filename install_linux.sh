@@ -8,6 +8,13 @@ sudo apt update
 sudo apt install neovim -y
 pip3 install --user neovim
 
+sudo update-alternatives --install /usr/bin/vi vi /usr/bin/nvim 60
+sudo update-alternatives --config vi
+sudo update-alternatives --install /usr/bin/vim vim /usr/bin/nvim 60
+sudo update-alternatives --config vim
+sudo update-alternatives --install /usr/bin/editor editor /usr/bin/nvim 60
+sudo update-alternatives --config editor
+
 # Install [powerline-shell](https://github.com/powerline/powerline)
 pip3 install --user powerline-status
 
