@@ -64,3 +64,5 @@ set backup
 
 autocmd filetype cpp nnoremap <C-c> :w <bar> !g++ -std=c++17 -O2 % -o %:p:h/%:t:r.out && ./%:r.out<CR>
 autocmd filetype c nnoremap <C-c> :w <bar> !gcc -std=c11 -lm % -o %:p:h/%:t:r.out && ./%:r.out<CR>
+inoremap <C-e> <C-o>$
+inoremap <C-a> <C-o>0
