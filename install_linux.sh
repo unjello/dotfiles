@@ -1,6 +1,11 @@
 # Install pip and pip3
 sudo apt install python3-pip
 
+# Install neovim
+sudo apt install software-properties-common -y
+sudo apt-add-repository ppa:neovim-ppa/stable -y
+sudo apt update
+sudo apt install neovim -y
 pip3 install --user neovim
 
 # Install [powerline-shell](https://github.com/powerline/powerline)
