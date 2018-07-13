@@ -54,6 +54,7 @@ let g:airline_powerline_fonts=1
 
 set noruler
 set noshowmode
+set autowrite
 
 au VimEnter * RainbowParenthesesActivate
 au Syntax * RainbowParenthesesLoadSquare
