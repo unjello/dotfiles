@@ -1,4 +1,4 @@
-#!/usr/bin/env zsh
+#!/usr/bin/env bash
 # andrzej lichnerowicz, unlicensed (~public domain)
 
 # Install Visual Studio Code (w/ Insiders) settings
