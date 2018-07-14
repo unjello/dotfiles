@@ -28,6 +28,18 @@
     added = yellow
     changed = green
     untracked = cyan
+
+[push]
+    default = current
+[pull]
+    default = current
+[diff]
+    mnemonicprefix = true
+[branch]
+    autosetuprebase = always
+[apply]
+    whitespace = nowarn
+
 [alias]
   co = checkout
   ci = commit
