@@ -1,5 +1,6 @@
 # bash_profile, parts taken or inspired by:
 # @noopkat: https://github.com/noopkat/dotfiles/blob/master/.bash_profile
+# @samphippen: https://mobile.twitter.com/samphippen/status/101773899101211443aea3
 # cheers.
 
 source ~/bin/.git-completion.bash
@@ -23,6 +24,8 @@ export NVM_DIR="$HOME/.nvm"
 alias gia='git add'
 alias gws='git status --short'
 alias gcm='git commit -m'
+
+alias typeless='history | tail -n 20000 | sed "s/.*  //" | sort | uniq -c | sort -g | tail -n 100'
 
 ###-begin-pm2-completion-###
 ### credits to npm for the completion file model
