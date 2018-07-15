@@ -18,6 +18,8 @@ Plug 'kien/rainbow_parentheses.vim'
 Plug 'neomake/neomake'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py --js-completer --clang-completer' }
 Plug 'rhysd/vim-clang-format'
+Plug 'scrooloose/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
 
 call plug#end()
 
@@ -66,3 +68,4 @@ autocmd filetype cpp nnoremap <C-c> :w <bar> !g++ -std=c++17 -O2 % -o %:p:h/%:t:
 autocmd filetype c nnoremap <C-c> :w <bar> !gcc -std=c11 -lm % -o %:p:h/%:t:r.out && ./%:r.out<CR>
 inoremap <C-e> <C-o>$
 inoremap <C-a> <C-o>0
+map <C-n> :NERDTreeToggle<CR>
