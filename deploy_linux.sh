@@ -9,3 +9,7 @@ gsettings set org.pantheon.terminal.settings font 'Roboto Mono 11'
 
 # Ubuntu needs this file to be .bashrc, not profile like macOS
 ln -s $(pwd)/dot/bash_profile ~/.bashrc
+
+# Link git settings
+ln -s $(pwd)/dot/gitignore_global ~/.gitignore_global
+ln -s $(pwd)/dot/gitconfig ~/.gitconfig
