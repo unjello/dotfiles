@@ -9,3 +9,7 @@
 
 # install bash_profile
 ln -s $(pwd)/dot/bash_profile ~/.bash_profile
+
+# Link git settings
+ln -s $(pwd)/dot/gitignore_global ~/.gitignore_global
+ln -s $(pwd)/dot/gitconfig ~/.gitconfig
