@@ -42,6 +42,7 @@
 
 [alias]
   co = checkout
+  cod = checkout develop
   ci = commit
   st = status -s
   br = branch
