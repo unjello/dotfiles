@@ -78,4 +78,5 @@
   rh1 = reset HEAD^ --hard
   rh2 = reset HEAD^^ --hard
   rb = rebase
+  rbd = rebase develop
   rbi = rebase --ignore-date
