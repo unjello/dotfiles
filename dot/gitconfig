@@ -78,5 +78,5 @@
   rh1 = reset HEAD^ --hard
   rh2 = reset HEAD^^ --hard
   rb = rebase
-  rbd = rebase develop
+  rbd = "!f() { BRANCH=$(git rev-parse --abbrev-ref HEAD) && git stash save && git checkout develop && git pull && git checkout $BRANCH && git rebase develop && git stash pop; }; f"
   rbi = rebase --ignore-date
