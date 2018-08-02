@@ -80,3 +80,4 @@
   rb = rebase
   rbd = "!f() { BRANCH=$(git rev-parse --abbrev-ref HEAD) && git stash save && git checkout develop && git pull && git checkout $BRANCH && git rebase develop && git stash pop; }; f"
   rbi = rebase --ignore-date
+  mpd = "!f() { BRANCH=$(git rev-parse --abbrev-ref HEAD) && git checkout develop && git merge $BRANCH && git push $$ git checkout $BRANCH; }; f"
