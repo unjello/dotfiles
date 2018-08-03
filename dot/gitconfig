@@ -45,6 +45,7 @@
   cod = checkout develop
   ci = commit
   st = status -s
+  bc = rev-parse --abbrev-ref HEAD
   br = branch
   hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
   type = cat-file -t
