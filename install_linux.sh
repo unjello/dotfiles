@@ -72,3 +72,8 @@ npm i -g pm2
 sudo add-apt-repository ppa:phoerious/keepassxc -y
 sudo apt update
 sudo apt install keepassxc -y
+
+# Install ripgrep
+curl -LO https://github.com/BurntSushi/ripgrep/releases/download/0.9.0/ripgrep_0.9.0_amd64.deb
+sudo dpkg -i ripgrep_0.9.0_amd64.deb
+rm ripgrep_0.9.0_amd64.deb
