@@ -67,3 +67,8 @@ nvm use 10
 npm i -g npm
 npm i -g pnpm
 npm i -g pm2
+
+# Install KeepassXC
+sudo add-apt-repository ppa:phoerious/keepassxc -y
+sudo apt update
+sudo apt install keepassxc -y
