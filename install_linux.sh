@@ -82,3 +82,4 @@ rm ripgrep_0.9.0_amd64.deb
 sudo apt install libffi-dev python3-dev libssl-dev inotify-tools python3-dbus
 pip3 install --user git+https://github.com/xybu/onedrived-dev.git
 
+sudo apt install rustc cargo golang
