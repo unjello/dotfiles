@@ -83,3 +83,6 @@ sudo apt install libffi-dev python3-dev libssl-dev inotify-tools python3-dbus
 pip3 install --user git+https://github.com/xybu/onedrived-dev.git
 
 sudo apt install rustc cargo golang
+
+# for glxinfo
+sudo apt install mesa_utils
