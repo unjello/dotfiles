@@ -90,6 +90,9 @@ sudo apt install mesa_utils
 sudo apt install mc
 
 # Install newest compilers
+wget -O - https://apt.llvm.org/llvm-snapshot.gpg.key|sudo apt-key add -
+sudo add-apt-repository -s -y 'deb http://apt.llvm.org/xenial/ llvm-toolchain-xenial main'
 sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
 sudo apt update -y
 sudo apt install -y --install-recommends gcc-8-multilib g++-8-multilib
+sudo apt install -y libllvm8 llvm-8 llvm-8-dev llvm-8-doc llvm-8-examples llvm-8-runtime clang-8 clang-tools-8 clang-8-doc libclang-common-8-dev libclang-8-dev libclang1-8 clang-format-8 python-clang-8 libfuzzer-8-dev lldb-8 lld-8 libc++-8-dev libc++abi-8-dev libomp-8-dev
