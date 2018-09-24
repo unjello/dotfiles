@@ -86,3 +86,5 @@ sudo apt install rustc cargo golang
 
 # for glxinfo
 sudo apt install mesa_utils
+
+sudo apt install mc
