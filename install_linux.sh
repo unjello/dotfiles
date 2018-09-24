@@ -88,3 +88,8 @@ sudo apt install rustc cargo golang
 sudo apt install mesa_utils
 
 sudo apt install mc
+
+# Install newest compilers
+sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
+sudo apt update -y
+sudo apt install -y --install-recommends gcc-8-multilib g++-8-multilib
