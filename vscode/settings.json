@@ -1,6 +1,6 @@
 {
     "workbench.iconTheme": "eq-material-theme-icons",
-    "workbench.colorTheme": "Material Theme",
+    "workbench.colorTheme": "Night Owl",
     "material-icon-theme.showUpdateMessage": false,
     "typescript.check.npmIsInstalled": false,
     "vsicons.dontShowNewVersionMessage": true,
