@@ -18,4 +18,4 @@ $ ./deploy_{linux,macos}.sh
 
 ## License
 
-- Unlicensed (~Public Domain)
+- CC0 (~Public Domain)
