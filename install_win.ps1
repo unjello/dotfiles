@@ -9,3 +9,4 @@ scoop install openssh
 [environment]::setenvironmentvariable('GIT_SSH', (resolve-path (scoop which ssh)), 'USER')
 scoop bucket add extras
 scoop install extras/totalcommander
+scoop install extras/anaconda3
