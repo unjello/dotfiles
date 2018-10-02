@@ -10,3 +10,4 @@ scoop install openssh
 scoop bucket add extras
 scoop install extras/totalcommander
 scoop install extras/anaconda3
+scoop install shellcheck
