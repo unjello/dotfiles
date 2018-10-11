@@ -12,3 +12,4 @@ scoop install extras/totalcommander
 scoop install extras/anaconda3
 scoop install shellcheck
 scoop install ripgrep
+scoop install neovim
