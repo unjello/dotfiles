@@ -10,3 +10,5 @@ history=cat "%CMDER_ROOT%\config\.history"
 unalias=alias /d $1
 vi=vim $*
 cmderr=cd /d "%CMDER_ROOT%"
+gia=git add $*
+gcm=git commit -m $*
