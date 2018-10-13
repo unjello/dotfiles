@@ -4,9 +4,6 @@
 ;= rem In batch mode, jump to the end of the file
 ;= goto:eof
 ;= Add aliases below here
-e.=explorer .
-gl=git log --oneline --all --graph --decorate  $*
-ls=ls --show-control-chars -F --color $*
 pwd=cd
 clear=cls
 history=cat "%CMDER_ROOT%\config\.history"
