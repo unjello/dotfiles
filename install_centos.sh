@@ -22,6 +22,7 @@ sudo yum -y install code
 code --install-extension sdras.night-owl
 code --install-extension vscoss.vscode-ansible
 code --install-extension robertohuertasm.vscode-icons
+code --install-extension rust-lang.rust
 
 # Install git helpers
 mkdir -p ~/bin
