@@ -17,3 +17,14 @@ sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.m
 
 sudo yum check-update
 sudo yum -y install code
+
+# Install vscode extensions
+code --install-extension sdras.night-owl
+code --install-extension vscoss.vscode-ansible
+code --install-extension robertohuertasm.vscode-icons
+
+# Install git helpers
+mkdir -p ~/bin
+curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash > ~/bin/.git-completion.bash
+curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh > ~/bin/.git-prompt.bash
+
