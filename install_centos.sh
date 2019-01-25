@@ -36,3 +36,10 @@ tar -zxf ripgrep-0.10.0-x86_64-unknown-linux-musl.tar.gz
 cp ripgrep-0.10.0-x86_64-unknown-linux-musl.tar.gz/rg /usr/local/bin
 rm -rf ripgrep-0.10.0-x86_64-unknown-linux-musl*
 
+# Install exa
+sudo yum install -y libgit2-devel cmake
+sudo chmod `whoami`: -R /usr/local
+git clone https://github.com/ogham/exa.git
+pushd exa; sudo make install; popd
+rm -rf exa
+
