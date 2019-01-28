@@ -38,7 +38,7 @@ rm -rf ripgrep-0.10.0-x86_64-unknown-linux-musl*
 
 # Install exa
 sudo yum install -y libgit2-devel cmake
-sudo chmod `whoami`: -R /usr/local
+sudo chown `whoami`: -R /usr/local
 git clone https://github.com/ogham/exa.git
 pushd exa; make install; popd
 rm -rf exa
