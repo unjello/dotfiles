@@ -5,7 +5,7 @@
     "typescript.check.npmIsInstalled": false,
     "vsicons.dontShowNewVersionMessage": true,
     "material-icon-theme.showWelcomeMessage": false,
-    "editor.fontFamily": "Fira Code Retina",
+    "editor.fontFamily": "Fira Code",
     "editor.fontLigatures": true,
     "editor.fontSize": 12,
     "workbench.startupEditor": "newUntitledFile",
