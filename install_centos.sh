@@ -33,7 +33,7 @@ curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-pro
 # Install ripgrep
 curl -LO https://github.com/BurntSushi/ripgrep/releases/download/0.10.0/ripgrep-0.10.0-x86_64-unknown-linux-musl.tar.gz
 tar -zxf ripgrep-0.10.0-x86_64-unknown-linux-musl.tar.gz
-cp ripgrep-0.10.0-x86_64-unknown-linux-musl.tar.gz/rg /usr/local/bin
+cp ripgrep-0.10.0-x86_64-unknown-linux-musl/rg /usr/local/bin
 rm -rf ripgrep-0.10.0-x86_64-unknown-linux-musl*
 
 # Install exa
