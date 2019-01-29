@@ -76,3 +76,6 @@ for type in Bold Light Medium Regular Retina; do
     fi;
 done
 fc-cache -f
+
+# Install socat for ssh tunelling
+sudo yum install -y socat
