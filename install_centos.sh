@@ -79,3 +79,7 @@ fc-cache -f
 
 # Install socat for ssh tunelling
 sudo yum install -y socat
+
+# Install NeoVIM
+sudo yum --enablerepo=epel install neovim
+
