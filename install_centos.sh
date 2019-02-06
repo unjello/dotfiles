@@ -81,5 +81,5 @@ fc-cache -f
 sudo yum install -y socat
 
 # Install NeoVIM
-sudo yum --enablerepo=epel install neovim
+sudo yum --enablerepo=epel -y install neovim
 
