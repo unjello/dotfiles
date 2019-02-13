@@ -39,11 +39,8 @@
 
 (use-package powerline
   :ensure t
-  :after spaceline-config
   :config
   (setq
    powerline-height (truncate (* 1.0 (frame-char-height)))
    powerline-default-separator 'utf-8)
 )
-~                                                                              
-~                                   
