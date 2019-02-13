@@ -83,3 +83,5 @@ sudo yum install -y socat
 # Install NeoVIM
 sudo yum --enablerepo=epel -y install neovim
 
+# Install emacs
+sudo yum install -y emacs

@@ -15,3 +15,6 @@ ln -s $(pwd)/dot/bash_profile ~/.bashrc
 # Link git settings
 ln -s $(pwd)/dot/gitignore_global ~/.gitignore_global
 ln -s $(pwd)/dot/gitconfig ~/.gitconfig
+
+# Link emacs
+ln -s $(pwd)/dot/emacs.d ~/.emacs.d
