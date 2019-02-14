@@ -85,3 +85,10 @@ sudo yum --enablerepo=epel -y install neovim
 
 # Install emacs
 sudo yum install -y emacs
+
+# Install nvm
+mkdir -p ~/.nvm
+export LD_LIBRARY_PATH=/opt/rh/httpd24/root/usr/lib64:$LD_LIBRARY_PATH
+sudo ldconfig
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash
+nvm install 11
