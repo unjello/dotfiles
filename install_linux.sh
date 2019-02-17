@@ -97,7 +97,7 @@ sudo apt install mc tmux
 
 # Install newest compilers
 wget -O - https://apt.llvm.org/llvm-snapshot.gpg.key|sudo apt-key add -
-sudo add-apt-repository -s -y 'deb http://apt.llvm.org/xenial/ llvm-toolchain-xenial main'
+sudo add-apt-repository -s -y 'deb http://apt.llvm.org/bionic/ llvm-toolchain-bionic main'
 sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
 sudo apt update -y
 sudo apt install -y --install-recommends gcc-8-multilib g++-8-multilib
