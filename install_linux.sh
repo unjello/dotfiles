@@ -101,7 +101,12 @@ sudo add-apt-repository -s -y 'deb http://apt.llvm.org/bionic/ llvm-toolchain-bi
 sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
 sudo apt update -y
 sudo apt install -y --install-recommends gcc-8-multilib g++-8-multilib
-sudo apt install -y libllvm8 llvm-8 llvm-8-dev llvm-8-doc llvm-8-examples llvm-8-runtime clang-8 clang-tools-8 clang-8-doc libclang-common-8-dev libclang-8-dev libclang1-8 clang-format-8 python-clang-8 libfuzzer-8-dev lldb-8 lld-8 libc++-8-dev libc++abi-8-dev libomp-8-dev
+sudo apt install -y libllvm9 llvm-9 llvm-9-dev llvm-9-doc llvm-9-examples llvm-9-runtime clang-9 clang-tools-9 clang-9-doc libclang-common-9-dev libclang-9-dev libclang1-9 clang-format-9 python-clang-9 libfuzzer-9-dev lldb-9 lld-9 libc++-9-dev libc++abi-9-dev libomp-9-dev
+
+sudo update-alternatives --install /usr/bin/clang clang /usr/bin/clang-9 60
+sudo update-alternatives --config clang
+sudo update-alternatives --install /usr/bin/clang++ clang++ /usr/bin/clang++-9 60
+sudo update-alternatives --config clang++
 
 # Install Docker
 curl -fsSL https://get.docker.com | sh
