@@ -134,3 +134,11 @@ sudo apt update && \
 sudo add-apt-repository ppa:obsproject/obs-studio -y
 sudo apt update -qq -y
 sudo apt install obs-studio -y
+
+# Install vscode extensions
+code --install-extension sdras.night-owl
+code --install-extension vscoss.vscode-ansible
+code --install-extension robertohuertasm.vscode-icons
+code --install-extension rust-lang.rust
+code --install-extension samuelcolvin.jinjahtml
+
