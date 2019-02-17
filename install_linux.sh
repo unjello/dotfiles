@@ -76,9 +76,9 @@ sudo apt update
 sudo apt install keepassxc -y
 
 # Install ripgrep
-curl -LO https://github.com/BurntSushi/ripgrep/releases/download/0.9.0/ripgrep_0.9.0_amd64.deb
-sudo dpkg -i ripgrep_0.9.0_amd64.deb
-rm ripgrep_0.9.0_amd64.deb
+curl -LO https://github.com/BurntSushi/ripgrep/releases/download/0.10.0/ripgrep_0.10.0_amd64.deb
+sudo dpkg -i ripgrep_0.10.0_amd64.deb
+rm ripgrep_0.10.0_amd64.deb
 
 # Install OneDrive client
 sudo apt install libffi-dev python3-dev libssl-dev inotify-tools python3-dbus
