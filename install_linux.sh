@@ -82,11 +82,11 @@ rm ripgrep_0.9.0_amd64.deb
 sudo apt install libffi-dev python3-dev libssl-dev inotify-tools python3-dbus
 pip3 install --user git+https://github.com/xybu/onedrived-dev.git
 
-sudo apt install rustc cargo
+sudo apt install -y rustc cargo
 
 # Install go-lang (ubuntu has oooold version)
 sudo add-apt-repository ppa:gophers/archive
-sudo apt update && sudo apt install golang-1.10-go
+sudo apt update && sudo apt install -y golang-1.10-go
 
 # for glxinfo
 sudo apt install mesa_utils
