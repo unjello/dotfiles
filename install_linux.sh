@@ -61,7 +61,9 @@ echo "fc-cache -f"
 fc-cache -f
 
 # Install nvm
+mkdir -p ~/.nvm
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
+source ~/.nvm/nvm.sh
 nvm install 10
 nvm use 10
 npm i -g npm
