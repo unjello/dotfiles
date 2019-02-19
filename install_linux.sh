@@ -154,4 +154,4 @@ echo "deb [arch=amd64] https://brave-browser-apt-release.s3.brave.com/ $UBUNTU_C
 sudo apt update
 sudo apt install -y brave-browser brave-keyring
 
-sudo apt install aria2 axel
+sudo apt install aria2 axel pv
