@@ -153,3 +153,5 @@ source /etc/os-release
 echo "deb [arch=amd64] https://brave-browser-apt-release.s3.brave.com/ $UBUNTU_CODENAME main" | sudo tee /etc/apt/sources.list.d/brave-browser-release-${UBUNTU_CODENAME}.list
 sudo apt update
 sudo apt install -y brave-browser brave-keyring
+
+sudo apt install aria2
