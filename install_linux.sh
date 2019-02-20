@@ -155,3 +155,6 @@ sudo apt update
 sudo apt install -y brave-browser brave-keyring
 
 sudo apt install aria2 axel pv
+
+# Install RDP client
+sudo apt install remmina -y
