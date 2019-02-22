@@ -148,6 +148,7 @@ code --install-extension vscoss.vscode-ansible
 code --install-extension robertohuertasm.vscode-icons
 code --install-extension rust-lang.rust
 code --install-extension samuelcolvin.jinjahtml
+code --install-extension vector-of-bool.cmake-tools
 
 # Install Brave Browser
 curl -s https://brave-browser-apt-release.s3.brave.com/brave-core.asc | sudo apt-key --keyring /etc/apt/trusted.gpg.d/brave-browser-release.gpg add 
