@@ -11,8 +11,7 @@
   :diminish org-indent-mode
   :defer t
   :bind (("\C-c a" . org-agenda)
-	 ("\C-c c" . org-capture)
-	 ("\C-c j" . gs-helm-org-link-to-contact))
+	 ("\C-c c" . org-capture))
   :config
 
 
@@ -23,11 +22,11 @@
   (add-hook 'org-indent-mode-hook #'unj/diminish-org-indent)
 
   ;; Fix evil-auto-indent for org buffers.
-  (defun gs-org-disable-evil-auto-indent nil
+  (defun unj/org-disable-evil-auto-indent nil
     "Disables evil's auto-indent for org."
     (setq evil-auto-indent nil)
     )
-  (add-hook 'org-mode-hook #'gs-org-disable-evil-auto-indent)
+  (add-hook 'org-mode-hook #'unj/org-disable-evil-auto-indent)
   
   ;; Custom functions for emacs & org mode
   (load-file "~/.emacs.d/init.d/gs-org.el")
@@ -131,39 +130,9 @@
    "t" 'org-agenda-todo
    "w" 'org-agenda-refile
    "/" 'org-agenda-filter-by-tag
-   "cs" '(gs-org-goto :which-key "org goto")
    "c/" '(helm-org-rifle :which-key "org-rifle")
    )
 
-
-  ;; Evil key configuration (org)
-
-  (defun gs-org-meta-return (&optional _arg)
-    "Ensures org-meta-return switches to evil insert mode"
-    (interactive)
-    (evil-append 0)
-    (org-meta-return _arg)
-    )
- 
-  (defun gs-org-insert-heading-respect-content (&optional invisible-ok)
-    "Insert heading with `org-insert-heading-respect-content' set to t."
-    (interactive)
-    (org-insert-heading '(4) invisible-ok)
-    (evil-insert 0))
-
-  (defun gs-org-goto ()
-    "Insert heading with `org-insert-heading-respect-content' set to t."
-    (interactive)
-    (org-refile '(4))
-    ;; (let ((org-goto-interface 'outline-path-completion)) (org-goto))
-    )
-
-  ;; (general-define-key
-  ;;  :keymaps org-mode-map
-  ;;  :states '(normal)
-  ;;  (kbd "<M-return>") 'gs-org-meta-return
-  ;;  (kbd "<C-return>") 'gs-org-insert-heading-respect-content
-  ;;  )
   (general-define-key
    :prefix (concatenate 'string gjs-leader-key)
    :keymaps 'org-mode-map
@@ -174,8 +143,6 @@
    "ct" '(org-todo :which-key "todo state")
    "ce" '(org-export-dispatch :which-key "org export")
    "cp" '(org-set-property :which-key "org set property")
-   "cs" '(gs-org-goto :which-key "org goto")
-   "cj" '(gs-helm-org-link-to-contact :which-key "link contact")
    "c/" '(helm-org-rifle :which-key "org-rifle")
    )
   ;; some functions for timing
