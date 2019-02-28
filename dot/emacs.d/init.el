@@ -25,5 +25,6 @@
 (require 'diminish)                ;; if you use :diminish
 (require 'bind-key)                ;; if you use any :bind variant
 
-(load-file "~/.emacs.d/init.d/30-theme.el")
+(load-file "~/.emacs.d/init.d/10-theme.el")
+(load-file "~/.emacs.d/init.d/20-org-mode.el")
 (load-file "~/.emacs.d/init.d/60-ansible.el")
