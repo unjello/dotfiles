@@ -89,8 +89,8 @@ pip3 install --user git+https://github.com/xybu/onedrived-dev.git
 sudo apt install -y rustc cargo
 
 # Install go-lang (ubuntu has oooold version)
-sudo add-apt-repository ppa:gophers/archive
-sudo apt update && sudo apt install -y golang-1.10-go
+sudo add-apt-repository ppa:longsleep/golang-backports
+sudo apt update && sudo apt install -y golang-go
 
 # for glxinfo
 sudo apt install mesa_utils
