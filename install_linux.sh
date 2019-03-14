@@ -90,7 +90,7 @@ sudo apt install -y rustc cargo
 
 # Install go-lang (ubuntu has oooold version)
 sudo add-apt-repository ppa:longsleep/golang-backports
-sudo apt update && sudo apt install -y golang-go
+sudo apt update && sudo apt install -y golang-go go-dep
 
 # for glxinfo
 sudo apt install mesa_utils
