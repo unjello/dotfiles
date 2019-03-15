@@ -27,6 +27,7 @@ code --install-extension samuelcolvin.jinjahtml
 code --install-extension vector-of-bool.cmake-tools
 code --install-extension twxs.cmake
 code --install-extension alesiong.clang-tidy-linter
+code --install-extension ms-vscode.go
 
 # Install git helpers
 mkdir -p ~/bin

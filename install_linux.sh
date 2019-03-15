@@ -151,6 +151,7 @@ code --install-extension samuelcolvin.jinjahtml
 code --install-extension vector-of-bool.cmake-tools
 code --install-extension twxs.cmake
 code --install-extension alesiong.clang-tidy-linter
+code --install-extension ms-vscode.go
 
 # Install Brave Browser
 curl -s https://brave-browser-apt-release.s3.brave.com/brave-core.asc | sudo apt-key --keyring /etc/apt/trusted.gpg.d/brave-browser-release.gpg add 
