@@ -7,19 +7,22 @@
     - "{{ ansible_os_family }}.yml"
     - "default.yml"
 
-- name: Download Eclipse package
-  get_url:
-    url: "{{ package_url }}"
-    dest: /tmp/eclipse.tar.gz
-    checksum: "{{ package_sha }}"
-
 - name: Extract Eclipse package
   become: true
   unarchive:
-    src: /tmp/eclipse.tar.gz
+    src: "{{ package_url }}"
     dest: /opt
+    remote_src: true
 
-- name: Remove temporary package
+- name: Create symlink to application
+  become: true
   file:
-    name: /tmp/eclipse.tar.gz
-    state: absent  
+    src: /opt/eclipse/eclipse
+    dest: /usr/local/bin/eclipse
+    state: link
+
+- name: Create Eclipse desktop launcher
+  become: true
+  copy:
+    src: "{{ role_path }}/files/eclipse.desktop"
+    dest: /usr/share/applications/eclipse.desktop
