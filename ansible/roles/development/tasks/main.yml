@@ -1,4 +1,8 @@
 ---
-- name: Install Eclipse
-  include_role:
-    name: eclipse
+- include_role:
+    name: {{ role }}
+  loop:
+    - base
+    - eclipse
+  loop_control:
+    loop_var: role
