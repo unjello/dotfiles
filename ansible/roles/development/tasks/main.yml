@@ -1,0 +1,4 @@
+---
+- name: Install Eclipse
+  include_role:
+    name: eclipse

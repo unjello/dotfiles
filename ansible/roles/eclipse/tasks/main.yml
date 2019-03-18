@@ -1,0 +1,25 @@
+---
+- name: Inlcude OS-specific variables
+  include_vars: "{{ item }}"
+  with_first_found:
+    - "{{ ansible_distribution }}-{{ ansible_distribution_major_version | int}}.yml"
+    - "{{ ansible_distribution }}.yml"
+    - "{{ ansible_os_family }}.yml"
+    - "default.yml"
+
+- name: Download Eclipse package
+  get_url:
+    url: "{{ package_url }}"
+    dest: /tmp/eclipse.tar.gz
+    checksum: "{{ package_sha }}"
+
+- name: Extract Eclipse package
+  become: true
+  unarchive:
+    src: /tmp/eclipse.tar.gz
+    dest: /opt
+
+- name: Remove temporary package
+  file:
+    name: /tmp/eclipse.tar.gz
+    state: absent  
