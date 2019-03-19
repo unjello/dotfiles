@@ -7,9 +7,10 @@
     - "default.yml"
 
 - name: Install Software
+  become: true
   package:
-    name: {{ package }}
+    name: "{{ package }}"
     state: present
-  loop: {{ packages|flatten }}
+  loop: "{{ packages|flatten }}"
   loop_control:
     loop_var: package

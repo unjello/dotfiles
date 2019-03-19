@@ -1,6 +1,7 @@
 ---
-- include_role:
-    name: {{ role }}
+- name: Run all roles
+  include_role:
+    name: "{{ role }}"
   loop:
     - base
     - eclipse

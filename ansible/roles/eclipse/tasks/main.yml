@@ -7,14 +7,21 @@
     - "{{ ansible_os_family }}.yml"
     - "default.yml"
 
-- name: Extract Eclipse package
+- name: Download and install Eclipse package
   become: true
   unarchive:
     src: "{{ package_url }}"
     dest: /opt
     remote_src: true
 
-- name: Create symlink to application
+- name: Fix Eclipse folder ownership
+  become: true
+  file:
+    path: /opt/eclipse
+    owner: "{{ ansible_user_id }}"
+    recurse: yes
+
+- name: Create symlink to Eclipse
   become: true
   file:
     src: /opt/eclipse/eclipse
@@ -26,3 +33,18 @@
   copy:
     src: "{{ role_path }}/files/eclipse.desktop"
     dest: /usr/share/applications/eclipse.desktop
+
+- name: Download eclim
+  get_url:
+    url: https://github.com/ervandew/eclim/releases/download/2.8.0/eclim_2.8.0.bin
+    dest: /tmp/eclim.bin
+
+- name: Install eclim
+  command: sh /tmp/eclim.bin --eclipse=/opt/eclipse --plugins=jdt --vimfiles=skip --yes
+  args:
+    creates: /opt/eclipse/eclimd
+
+- name: Remove eclip installation file
+  file:
+    name: /tmp/eclim.bin
+    state: absent
