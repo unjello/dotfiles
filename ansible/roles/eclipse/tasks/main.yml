@@ -7,12 +7,18 @@
     - "{{ ansible_os_family }}.yml"
     - "default.yml"
 
+- name: Check if eclipse is installed
+  stat:
+    path: /opt/eclipse/eclipse
+  register: eclipse_stat_result
+
 - name: Download and install Eclipse package
   become: true
   unarchive:
     src: "{{ package_url }}"
     dest: /opt
     remote_src: true
+  when: eclipse_stat_result.stat.exists is sameas False
 
 - name: Fix Eclipse folder ownership
   become: true
@@ -20,6 +26,7 @@
     path: /opt/eclipse
     owner: "{{ ansible_user_id }}"
     recurse: yes
+  when: eclipse_stat_result.stat.exists is sameas False
 
 - name: Create symlink to Eclipse
   become: true
@@ -27,22 +34,31 @@
     src: /opt/eclipse/eclipse
     dest: /usr/local/bin/eclipse
     state: link
+  when: eclipse_stat_result.stat.exists is sameas False
 
 - name: Create Eclipse desktop launcher
   become: true
   copy:
     src: "{{ role_path }}/files/eclipse.desktop"
     dest: /usr/share/applications/eclipse.desktop
+  when: eclipse_stat_result.stat.exists is sameas False
+
+- name: Check if eclim is installed
+  stat:
+    path: /opt/eclipse/eclimd
+  register: eclimd_stat_result
 
 - name: Download eclim
   get_url:
     url: https://github.com/ervandew/eclim/releases/download/2.8.0/eclim_2.8.0.bin
     dest: /tmp/eclim.bin
+  when: eclimd_stat_result.stat.exists is sameas False
 
 - name: Install eclim
   command: sh /tmp/eclim.bin --eclipse=/opt/eclipse --plugins=jdt --vimfiles=skip --yes
   args:
     creates: /opt/eclipse/eclimd
+  when: eclimd_stat_result.stat.exists is sameas False
 
 - name: Remove eclip installation file
   file:
