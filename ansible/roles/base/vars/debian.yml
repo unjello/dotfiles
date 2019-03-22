@@ -1,2 +1,5 @@
 packages:
 - qalc
+- mesa_utils
+- mc
+- tmux

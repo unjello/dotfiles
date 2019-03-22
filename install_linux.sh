@@ -92,11 +92,6 @@ sudo apt install -y rustc cargo
 sudo add-apt-repository ppa:longsleep/golang-backports
 sudo apt update && sudo apt install -y golang-go go-dep
 
-# for glxinfo
-sudo apt install mesa_utils
-
-sudo apt install mc tmux
-
 # Install newest compilers
 wget -O - https://apt.llvm.org/llvm-snapshot.gpg.key|sudo apt-key add -
 sudo add-apt-repository -s -y 'deb http://apt.llvm.org/bionic/ llvm-toolchain-bionic main'
