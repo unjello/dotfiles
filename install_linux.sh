@@ -1,8 +1,3 @@
-# Install pip and pip3
-sudo apt install python3-pip python3-dev -y
-
-sudo pip3 install cmake ninja
-
 # Install neovim
 sudo apt install software-properties-common build-essential -y
 sudo apt-add-repository ppa:neovim-ppa/stable -y
