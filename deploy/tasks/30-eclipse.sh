@@ -4,6 +4,9 @@ eclipse_url="http://ftp.fau.de/eclipse/technology/epp/downloads/release/2019-03/
 eclipse_sha="a85d59edce742482decb86002a4007d0f073cc11533de616960a77ff8dc1add8631ed24a1a6d5dc1c8246e1597cf39101fa79048bd93051216fd23c2001001d9"
 eclipse_tmp="eclipse-jee.tar.gz"
 
+eclim_url="https://github.com/ervandew/eclim/releases/download/2.8.0/eclim_2.8.0.bin"
+eclim_tmp="eclim.bin"
+
 if [[ ! -d /opt/eclipse ]]; then
   mkdir -p ~/temp_deploy
   echo "Downloading Eclipse..."
@@ -31,8 +34,24 @@ Terminal=false
 StartupNotify=true
 EOF'
     fi
+    echo "Eclipse successfully installed."
   fi
   popd >/dev/null && rm -rf ~/temp_deploy
 else
     echo "Eclipse is already installed"
+fi
+
+if [[ ! -f /opt/eclipse/eclimd ]]; then
+  mkdir -p ~/temp_deploy
+  echo "Downloading Eclim..."
+  pushd ~/temp_deploy >/dev/null && curl -#SL $eclim_url -o $eclim_tmp
+  if [[ $? -ge 1 ]]; then
+    echo "There was a problem with downloading Eclipse. Skipping ..."
+  else
+    sh $eclim_tmp --eclipse=/opt/eclipse --plugins=jdt --vimfiles=skip --yes
+    echo "Eclim successfully installed."
+  fi
+  popd >/dev/null && rm -rf ~/temp_deploy
+else
+  echo "Eclim is already installed"
 fi

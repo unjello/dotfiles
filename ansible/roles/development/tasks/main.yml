@@ -4,7 +4,6 @@
     name: "{{ role }}"
   loop:
     - base
-    - eclipse
     - cpp_development
   loop_control:
     loop_var: role
