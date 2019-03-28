@@ -50,6 +50,8 @@ if [[ ! -f /opt/eclipse/eclimd ]]; then
   else
     sh $eclim_tmp --eclipse=/opt/eclipse --plugins=jdt --vimfiles=skip --yes
     ln -s $(dirname $(readlink -f /opt/eclipse/eclimd))/eclim /opt/eclipse/eclim
+    # workspace directory will be required by tools using eclim
+    mkdir -p ~/.workspace
     echo "Eclim successfully installed."
   fi
   popd >/dev/null && rm -rf ~/temp_deploy
