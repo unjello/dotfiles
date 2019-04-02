@@ -45,11 +45,6 @@ npm i -g npm
 npm i -g pnpm
 npm i -g pm2
 
-# Install KeepassXC
-sudo add-apt-repository ppa:phoerious/keepassxc -y
-sudo apt update
-sudo apt install keepassxc -y
-
 # Install ripgrep
 curl -LO https://github.com/BurntSushi/ripgrep/releases/download/0.10.0/ripgrep_0.10.0_amd64.deb
 sudo dpkg -i ripgrep_0.10.0_amd64.deb
