@@ -105,17 +105,6 @@ sudo add-apt-repository ppa:obsproject/obs-studio -y
 sudo apt update -qq -y
 sudo apt install obs-studio -y
 
-# Install vscode extensions
-code --install-extension sdras.night-owl
-code --install-extension vscoss.vscode-ansible
-code --install-extension robertohuertasm.vscode-icons
-code --install-extension rust-lang.rust
-code --install-extension samuelcolvin.jinjahtml
-code --install-extension vector-of-bool.cmake-tools
-code --install-extension twxs.cmake
-code --install-extension alesiong.clang-tidy-linter
-code --install-extension ms-vscode.go
-
 # Install Brave Browser
 curl -s https://brave-browser-apt-release.s3.brave.com/brave-core.asc | sudo apt-key --keyring /etc/apt/trusted.gpg.d/brave-browser-release.gpg add 
 source /etc/os-release
