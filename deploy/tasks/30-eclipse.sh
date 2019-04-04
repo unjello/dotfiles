@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+[[ -z "$CORE_INCLUDED" ]] && { echo "Do not run directly. Use deploy.sh or run.sh"; exit 1; }
 
 eclipse_url="http://ftp.fau.de/eclipse/technology/epp/downloads/release/2019-03/R/eclipse-jee-2019-03-R-linux-gtk-x86_64.tar.gz"
 eclipse_sha="a85d59edce742482decb86002a4007d0f073cc11533de616960a77ff8dc1add8631ed24a1a6d5dc1c8246e1597cf39101fa79048bd93051216fd23c2001001d9"

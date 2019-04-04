@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
-
-declare -f getOsFamily || . 00-detect-os.sh
+[[ -z "$CORE_INCLUDED" ]] && { echo "Do not run directly. Use deploy.sh or run.sh"; exit 1; }
 
 if [[ "$(getOsFamily)" = "rhel" ]]; then
   sudo yum -y install ncurses-devel libXpm-devel libjpeg-turbo-devel openjpeg-devel openjpeg2-devel turbojpeg-devel giflib-devel libtiff-devel gnutls-devel libxml2-devel GConf2-devel dbus-devel wxGTK-devel gtk3-devel

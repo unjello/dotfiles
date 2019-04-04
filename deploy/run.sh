@@ -4,7 +4,13 @@ if ((BASH_VERSINFO[0] < 4)); then
   exit 1
 fi
 
+task_file="tasks/$1.sh"
+[[ ! -f $task_file ]] && {
+  echo "Task file NOT found: $task_file"
+  exit 1
+}
+
 shopt -s globstar
 
 for f in core/**.sh; do source $f; done
-for f in tasks/**.sh; do source $f; done
+source $task_file

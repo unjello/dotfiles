@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+[[ -z "$CORE_INCLUDED" ]] && { echo "Do not run directly. Use deploy.sh or run.sh"; exit 1; }
 
 fonts_dir="${HOME}/.local/share/fonts"
 if [ ! -d ${fonts_dir} ]; then
