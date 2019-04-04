@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-[[ $(declare -f getOsFamily) ]] && . 00-detect-os.sh
+declare -f getOsFamily || . 00-detect-os.sh
 
-if [[ getOsFamily -eq "elementary" ]]; then
+if [[ "$(getOsFamily)" = "ubuntu" ]]; then
   sudo apt -y install python3-pip python3-dev
   sudo ln -s /usr/bin/pip3 /usr/local/bin/pip
 fi
