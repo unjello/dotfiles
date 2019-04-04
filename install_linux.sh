@@ -45,11 +45,6 @@ npm i -g npm
 npm i -g pnpm
 npm i -g pm2
 
-# Install ripgrep
-curl -LO https://github.com/BurntSushi/ripgrep/releases/download/0.10.0/ripgrep_0.10.0_amd64.deb
-sudo dpkg -i ripgrep_0.10.0_amd64.deb
-rm ripgrep_0.10.0_amd64.deb
-
 # Install OneDrive client
 sudo apt install libffi-dev python3-dev libssl-dev inotify-tools python3-dbus
 pip3 install --user git+https://github.com/xybu/onedrived-dev.git
