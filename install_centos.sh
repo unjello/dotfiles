@@ -1,10 +1,6 @@
 sudo yum group mark install "Development Tools"
 sudo yum group update "Development Tools"
 
-# Inline with Upstream Stable
-sudo yum install -y https://centos7.iuscommunity.org/ius-release.rpm
-
-
 # Install git helpers
 mkdir -p ~/bin
 curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash > ~/bin/.git-completion.bash
