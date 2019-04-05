@@ -34,17 +34,6 @@ wget https://github.com/ogham/exa/releases/download/v0.8.0/exa-linux-x86_64-0.8.
 	sudo cp exa-linux-x86_64 /usr/local/bin/exa && \
 	rm -rf ~/.tmp
 
-
-# Install nvm
-mkdir -p ~/.nvm
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
-source ~/.nvm/nvm.sh
-nvm install 11
-nvm use 11
-npm i -g npm
-npm i -g pnpm
-npm i -g pm2
-
 # Install OneDrive client
 sudo apt install libffi-dev python3-dev libssl-dev inotify-tools python3-dbus
 pip3 install --user git+https://github.com/xybu/onedrived-dev.git
