@@ -1,9 +1,13 @@
 #!/usr/bin/env bash
 [[ -z "$CORE_INCLUDED" ]] && { echo "Do not run directly. Use deploy.sh or run.sh"; exit 1; }
 
-if [[ "$(getOsFamily)" = "ubuntu" ]]; then
+os=$(getOsFamily)
+if [[ "$os" = "ubuntu" ]]; then
   sudo apt -y install python3-pip python3-dev
   sudo ln -s /usr/bin/pip3 /usr/local/bin/pip
+elif [[ "$os" = "rhel" ]]; then
+  sudo yum install -y python27-python-pip
+  sudo yum install -y python36u python36u-pip python36u-devel
 fi
 
 pip_packages=(yq virtualenv virtualenvwrapper)
