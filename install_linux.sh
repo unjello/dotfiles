@@ -1,7 +1,3 @@
-# Install neovim
-sudo apt install software-properties-common build-essential -y
-
-
 # Install [powerline-shell](https://github.com/powerline/powerline)
 pip3 install --user powerline-status
 

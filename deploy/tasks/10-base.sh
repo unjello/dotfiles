@@ -1,8 +1,11 @@
 #!/usr/bin/env bash
 
-# Inline with Upstream Stable
-if [[ $(getOsFamily) = "rhel"]]; then
+os=$(getOsFamily)
+if [[ "$os" = "rhel"]]; then
+    # Inline with Upstream Stable
     sudo yum install -y https://centos7.iuscommunity.org/ius-release.rpm
+elif [[ "$os" = "ubuntu" ]]; then
+    sudo apt install software-properties-common build-essential -y
 fi
 
 # Install git prompt helpers
