@@ -39,13 +39,6 @@ sudo update-alternatives --config clang
 sudo update-alternatives --install /usr/bin/clang++ clang++ /usr/bin/clang++-9 60
 sudo update-alternatives --config clang++
 
-# Install Docker
-curl -fsSL https://get.docker.com | sh
-sudo usermod -aG docker $(whoami)
-sudo curl -L "https://github.com/docker/compose/releases/download/1.22.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-sudo chown root:docker /usr/local/bin/docker-compose
-sudo chmod ug+x /usr/local/bin/docker-compose
-
 # Install ffmpeg w/ NVENC for OBS
 curl -L https://developer.nvidia.com/video-sdk-601 -o /tmp/video-sdk-601 && \
 	pushd /tmp && \
