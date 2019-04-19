@@ -3,5 +3,9 @@
   {
     "key": "ctrl+oem_comma",
     "command": "-workbench.action.openGlobalSettings"
+  },
+  {
+     "key": "ctrl+x ctrl+c",
+     "command": "cmake.ctest"
   }
 ]
