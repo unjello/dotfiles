@@ -20,6 +20,23 @@ else
     echo "Bonzomatic is already installed"
 fi
 
+if [[ ! -f /usr/local/bin/glslViewer ]]; then
+  echo "Downloading glslViewer build dependencies..."
+  sudo apt install -y libglfw3-dev git-core
+  
+  mkdir -p ~/temp_deploy
+  echo "Downloading glslViewer..."
+  pushd ~/temp_deploy >/dev/null && git clone http://github.com/patriciogonzalezvivo/glslViewer
+  if [[ $? -ge 1 ]]; then
+    echo "There was a problem with downloading glslViewer git repo. Skipping ..."
+  else
+    pushd glslViewer && make && sudo make install
+    echo "glslViewer successfully installed."
+  fi
+  popd >/dev/null && popd >/dev/null && rm -rf ~/temp_deploy
+else
+    echo "glslViewer is already installed"
+fi
 
 
 
