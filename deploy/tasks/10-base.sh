@@ -6,6 +6,8 @@ if [[ "$os" = "rhel"]]; then
     sudo yum install -y https://centos7.iuscommunity.org/ius-release.rpm
 elif [[ "$os" = "ubuntu" ]]; then
     sudo apt install software-properties-common build-essential -y
+    # nvidia-xserver
+    sudo apt-get install pkg-config make xutils-dev libtool xserver-xorg-dev libx11-dev libxi-dev libxrandr-dev libxinerama-dev libudev-dev
 fi
 
 # Install git prompt helpers
