@@ -20,3 +20,8 @@ code --install-extension vector-of-bool.cmake-tools
 code --install-extension twxs.cmake
 code --install-extension alesiong.clang-tidy-linter
 code --install-extension ms-vscode.go
+code --install-extension editorconfig.editorconfig
+code --install-extension letrieu.expand-region
+code --install-extension vscjava.vscode-java-pack
+code --install-extension esbenp.prettier-vscode
+code --install-extension dbaeumer.vscode-eslint
