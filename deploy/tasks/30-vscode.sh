@@ -26,4 +26,4 @@ code --install-extension vscjava.vscode-java-pack
 code --install-extension esbenp.prettier-vscode
 code --install-extension dbaeumer.vscode-eslint
 code --install-extension nodesource.vscode-for-node-js-development-pack
-
+code --install-extension 2gua.rainbow-brackets
