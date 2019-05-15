@@ -27,3 +27,4 @@ code --install-extension esbenp.prettier-vscode
 code --install-extension dbaeumer.vscode-eslint
 code --install-extension nodesource.vscode-for-node-js-development-pack
 code --install-extension 2gua.rainbow-brackets
+code --install-extension k--kato.intellij-idea-keybindings
