@@ -86,3 +86,5 @@
   mpd = "!f() { BRANCH=$(git rev-parse --abbrev-ref HEAD) && git checkout develop && git merge $BRANCH && git push && git checkout $BRANCH; }; f"
   mpdd = "!f() { BRANCH=$(git rev-parse --abbrev-ref HEAD) && git checkout devel && git merge $BRANCH && git push && git checkout $BRANCH; }; f"
   mpm = "!f() { BRANCH=$(git rev-parse --abbrev-ref HEAD) && git checkout master && git merge $BRANCH && git push && git checkout $BRANCH; }; f"
+[credential]
+	helper = store
