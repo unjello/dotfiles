@@ -12,7 +12,7 @@ function get_os_family {
 }
 
 os=$(get_os_family)
-if [[ "$os" != "elemenary" ]]; then
+if [[ "$os" != "ubuntu" ]]; then
   echo "Elementary required"
 fi
 
