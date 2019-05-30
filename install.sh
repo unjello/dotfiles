@@ -21,4 +21,5 @@ sudo apt install -y python-pip
 pip install --user -U virtualenvwrapper
 export WORKON_HOME=~/.virtual-envs
 mkdir -p $WORKON_HOME
-source /usr/local/bin/virtualenvwrapper.sh
+export VIRTUALENVWRAPPER_PYTHON=python3.6
+source $HOME/.local/bin/virtualenvwrapper.sh 
