@@ -13,7 +13,8 @@ function get_os_family {
 
 os=$(get_os_family)
 if [[ "$os" != "ubuntu" ]]; then
-  echo "Elementary required"
+  echo "Ubuntu required"
+  exit 1
 fi
 
 sudo apt install python-pip
