@@ -17,8 +17,8 @@ if [[ "$os" != "ubuntu" ]]; then
   exit 1
 fi
 
-sudo apt install python-pip
-pip install virtualenvwrapper
+sudo apt install -y python-pip
+pip install --user -U virtualenvwrapper
 export WORKON_HOME=~/.virtual-envs
 mkdir -p $WORKON_HOME
 source /usr/local/bin/virtualenvwrapper.sh
