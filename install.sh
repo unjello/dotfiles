@@ -23,3 +23,5 @@ export WORKON_HOME=~/.virtual-envs
 mkdir -p $WORKON_HOME
 export VIRTUALENVWRAPPER_PYTHON=python3.6
 source $HOME/.local/bin/virtualenvwrapper.sh 
+mkvirtualenv ansible
+pip install -U virtualenvwrapper
