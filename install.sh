@@ -26,4 +26,5 @@ source $HOME/.local/bin/virtualenvwrapper.sh
 mkvirtualenv ansible
 pip install -r <(cat <<REQUIREMENTS
 virtualenvwrapper==4.8.4
+ansible==2.8.0
 REQUIREMENTS)
