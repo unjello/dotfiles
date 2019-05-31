@@ -18,10 +18,12 @@ if [[ "$os" != "ubuntu" ]]; then
 fi
 
 sudo apt install -y python-pip
-pip install --user -U virtualenvwrapper
+pip install --user -U virtualenvwrapper==4.8.4
 export WORKON_HOME=~/.virtual-envs
 mkdir -p $WORKON_HOME
 export VIRTUALENVWRAPPER_PYTHON=python3.6
 source $HOME/.local/bin/virtualenvwrapper.sh 
 mkvirtualenv ansible
-pip install -U virtualenvwrapper
+pip install -r <(cat <<REQUIREMENTS
+virtualenvwrapper==4.8.4
+REQUIREMENTS)
