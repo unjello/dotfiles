@@ -17,14 +17,34 @@ if [[ "$os" != "ubuntu" ]]; then
   exit 1
 fi
 
-sudo apt install -y python-pip
-pip install --user -U virtualenvwrapper==4.8.4
-export WORKON_HOME=~/.virtual-envs
-mkdir -p $WORKON_HOME
+`hash pip`
+if [[ $? -ge 1 ]]; then
+  echo "Pip not found, installing."
+  sudo apt install -y python-pip
+else
+  echo "Pip found".
+fi
+
+`hash virtualenvwrapper.sh`
+if [[ $? -ge 1 ]]; then
+  echo "VirtualEnvWrapper not found, installing."
+  pip install --user -U virtualenvwrapper==4.8.4
+  export WORKON_HOME=~/.virtual-envs
+  mkdir -p $WORKON_HOME
+else
+  echo "VirtualEnvWrapper found."
+fi
+
 export VIRTUALENVWRAPPER_PYTHON=python3.6
 source $HOME/.local/bin/virtualenvwrapper.sh 
-mkvirtualenv ansible
-pip install -r <(cat <<REQUIREMENTS
+`lsvirtualenv | grep ansible 2>&1 1>/dev/null`
+if [[ $? -ge 1 ]]; then
+  echo "Ansible virtual-env not found, configuring."
+  mkvirtualenv ansible
+  pip install -r <(cat <<REQUIREMENTS
 virtualenvwrapper==4.8.4
 ansible==2.8.0
 REQUIREMENTS)
+else
+  echo "Ansible virtual-env found."
+fi
