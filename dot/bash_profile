@@ -75,5 +75,6 @@ export PATH=~/.cargo/bin:$GOPATH/bin:$GOROOT/bin:$PATH
 export PATH="$PATH:$HOME/.rvm/bin"
 
 if [[ -f $HOME/.local/bin/virtualenvwrapper.sh ]]; then
+  export VIRTUALENVWRAPPER_PYTHON=python3.6
   source $HOME/.local/bin/virtualenvwrapper.sh
 fi
