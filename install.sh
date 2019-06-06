@@ -52,3 +52,6 @@ fi
 sudo apt install -y git
 mkdir -p ~/dotfiles
 git clone https://github.com/unjello/dotfiles.git ~/dotfiles
+pushd ~/dotfiles/ansible
+ansible-playbook plays/bootstrap.yml
+popd
