@@ -17,6 +17,12 @@ if [[ "$os" != "ubuntu" ]]; then
   exit 1
 fi
 
+if [[ -z "$proxy" ]]; then
+  sudo bash -c "http_proxy=$proxy apt update && apt upgrade"
+else
+  sudo apt update && sudo apt upgrade
+fi
+
 `hash pip`
 if [[ $? -ge 1 ]]; then
   echo "Pip not found, installing."
