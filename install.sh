@@ -11,6 +11,17 @@ function get_os_family {
   fi
 }
 
+function get_os_id {
+  if [ -f /etc/os-release ]; then
+    # freedesktop.org and systemd
+    . /etc/os-release
+    echo $(echo $ID | cut -f1 -d' ' | tr '[:upper:]' '[:lower:]')
+  else
+    # Fall back to uname, e.g. "Linux <version>", also works for BSD, etc.
+    echo $(uname -s)
+  fi
+}
+
 os=$(get_os_family)
 if [[ "$os" != "ubuntu" ]]; then
   echo "Ubuntu required"
