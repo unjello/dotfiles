@@ -22,11 +22,25 @@ function get_os_id {
   fi
 }
 
-os=$(get_os_family)
-if [[ "$os" != "ubuntu" ]]; then
+function check_ubuntu_family {
+  family=$(get_os_family)
+  distro=$(get_os_id)
+
+  if [[ "$distro" == "ubuntu" ]]; then
+    return 1
+  elif [[ "$family" == "ubuntu" ]]; then
+    return 1
+  fi
+  return 0
+}
+
+check_ubuntu_family
+if [[ $? -eq 0 ]]; then
   echo "Ubuntu required"
   exit 1
 fi
+
+echo "Ubuntu found. Installing..."
 
 if [[ -z "$proxy" ]]; then
   sudo bash -c "http_proxy=$proxy apt update && apt upgrade"
