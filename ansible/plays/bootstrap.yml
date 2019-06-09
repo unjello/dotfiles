@@ -1,3 +1,9 @@
 - hosts: all
-  roles:
-  - role: development
+  tasks:
+    - name: Run all roles
+      include_role:
+        name: "{{ role }}"
+      loop:
+        - base
+      loop_control:
+        loop_var: role

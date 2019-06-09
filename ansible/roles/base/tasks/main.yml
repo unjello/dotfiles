@@ -1,16 +1,14 @@
-- name: Inlcude OS-specific variables
-  include_vars: "{{ item }}"
-  with_first_found:
-    - "{{ ansible_distribution }}-{{ ansible_distribution_major_version | int}}.yml"
-    - "{{ ansible_distribution }}.yml"
-    - "{{ ansible_os_family }}.yml"
-    - "default.yml"
-
 - name: Install Software
   become: true
   package:
     name: "{{ package }}"
     state: present
-  loop: "{{ packages|flatten }}"
+  loop:
+    - qalc
+    - mesa_utils
+    - mc
+    - tmux
+    - python3-pip
+    - python3-dev
   loop_control:
     loop_var: package

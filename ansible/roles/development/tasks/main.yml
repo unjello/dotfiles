@@ -1,9 +1,0 @@
----
-- name: Run all roles
-  include_role:
-    name: "{{ role }}"
-  loop:
-    - base
-    - cpp_development
-  loop_control:
-    loop_var: role
