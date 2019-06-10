@@ -42,10 +42,10 @@ fi
 
 echo "Ubuntu found. Installing..."
 
-if [[ -z "$proxy" ]]; then
-  sudo bash -c "http_proxy=$proxy apt update && apt upgrade"
-else
+if [[ -z "${proxy}" ]]; then
   sudo apt update && sudo apt upgrade
+else
+  sudo bash -c "http_proxy=$proxy apt update && apt upgrade"
 fi
 
 `hash pip`
