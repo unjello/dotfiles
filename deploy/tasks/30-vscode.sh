@@ -28,3 +28,4 @@ code --install-extension dbaeumer.vscode-eslint
 code --install-extension nodesource.vscode-for-node-js-development-pack
 code --install-extension 2gua.rainbow-brackets
 code --install-extension k--kato.intellij-idea-keybindings
+code --install-extension ms-vscode-remote.vscode-remote-extensionpack
